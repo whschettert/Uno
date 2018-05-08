@@ -85,6 +85,10 @@ public class Match {
 		return curWinner;
 	}
 
+	public int getNumPlayers(){
+		return players.size();
+	}
+
 	/**
 	 * @category getters
 	 * @return the curCard

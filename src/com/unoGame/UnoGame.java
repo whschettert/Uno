@@ -1,7 +1,7 @@
 package com.unoGame;
 
-import com.States.GameState;
-import com.States.PlayerState;
+import com.States.MatchCollections;
+import com.States.PlayerCollections;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -28,8 +28,8 @@ public class UnoGame extends UnicastRemoteObject implements IUnoGame{
     public int registraJogador(String pName) throws RemoteException {
 
         Player p = new Player(pName);
-        int id = PlayerState.registerPlayer(p);
-        GameState.addPlayer(PlayerState.findPlayer(id));
+        int id = PlayerCollections.registerPlayer(p);
+        MatchCollections.addPlayer(PlayerCollections.findPlayer(id));
 
         return id;
     }
