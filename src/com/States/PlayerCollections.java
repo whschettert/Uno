@@ -1,7 +1,9 @@
 package com.States;
 
-import com.unoGame.Player;
 import java.util.ArrayList;
+import java.util.List;
+
+import com.unoGame.Player;
 /**
  * 
  * @author Wagner
@@ -17,15 +19,15 @@ public class PlayerCollections {
 
 	public static int registerPlayer(Player p) {
 		if (fullListOfPlayers.contains(p))
-			return -1
+			return -1;
 		fullListOfPlayers.add(p);
 		return p.getpId();
 	}
 
 	public static Player findPlayer(int id) {
 		for (Player p : fullListOfPlayers)
-			if (p.getpId == id)
-				return p
+			if (p.getpId() == id)
+				return p;
 		return null;
 	}
 }

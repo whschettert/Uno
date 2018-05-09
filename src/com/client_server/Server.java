@@ -2,6 +2,8 @@ package com.client_server;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
+import com.unoGame.UnoGame;
+
 /**
  * 
  * @author Wagner
@@ -17,7 +19,7 @@ public class Server {
             System.out.println("RMI registry already running.");
         }
         try {
-            Naming.rebind ("UnoGame", new ServerImpl());
+            Naming.rebind ("UnoGame", new UnoGame());
             System.out.println ("UnoGame is ready.");
         } catch (Exception e) {
             System.out.println ("UnoGame failed:");

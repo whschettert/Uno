@@ -10,10 +10,9 @@ import java.util.Stack;
  */
 public class Match {
 
-	private Card curCard;
-	private ETurn curTurn;
-	private Player curPlayer;
-	private Player opPlayer;	
+	private Card curCard;	
+	private Player curPlayer; //player
+	private Player opPlayer; //opponent	
 	private Stack<Card> trunk = new Stack<>();
 	private Stack<Card> discardPile = new Stack<>();
 	private List<Player> players = new ArrayList<>(); 
@@ -26,8 +25,7 @@ public class Match {
 	/**
 	 * 
 	 */
-	public Match() {
-		curTurn = ETurn.P;		
+	public Match() {			
 	}
 
 	/**
@@ -107,14 +105,6 @@ public class Match {
 	
 	/**
 	 * @category getters
-	 * @return the curTurn
-	 */
-	public ETurn getCurTurn() {
-		return curTurn;
-	}
-
-	/**
-	 * @category getters
 	 * @return the curPlayer
 	 */
 	public Player getCurPlayer() {
@@ -151,6 +141,14 @@ public class Match {
 	 */
 	public boolean isMatchStarted() {
 		return isMatchStarted;
+	}
+
+	public int getPNumbers() {
+		return players.size();
+	}
+
+	public void addPlayer(Player p) {
+		players.add(p);		
 	}
 	
 	

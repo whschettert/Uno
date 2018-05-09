@@ -8,11 +8,6 @@ import java.rmi.RemoteException;
 import java.util.Scanner;
 import java.util.UUID;
 
-/**
- * 
- * @author Wagner
- *
- */
 public class Client {
 
     private static Scanner scanner;
@@ -47,7 +42,7 @@ public class Client {
 
             ClientImpl client = new ClientImpl(game, idP, args.length > 0 && args[0].equals("t"));
 
-            client.begin();
+            client.start();
 
         } catch (MalformedURLException e) {
             e.printStackTrace();

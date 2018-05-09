@@ -3,14 +3,15 @@ package com.States;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.unoGame.UnoGame;
+import com.unoGame.Match;
+import com.unoGame.Player;
 
 /**
  * 
  * @author Wagner
  *
  */
-public class GameState {
+public class MatchCollections {
 
 	private static final int P_LIMIT = 2;
 	
@@ -19,7 +20,7 @@ public class GameState {
 	public static void addPlayer(Player p) {
 		for (Match match : matches) {
 			if(match.getPNumbers() < P_LIMIT) {
-				match.addPlayer(p)
+				match.addPlayer(p);
 				if(match.getNumPlayers() == P_LIMIT)
 					match.setIsMatchStarted();
 				return;
